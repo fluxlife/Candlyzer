@@ -1,0 +1,25 @@
+!!!
+%html
+	%head
+		%title Candlyzer
+		= stylesheet_link_tag    "application", :media => "all"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+	%body
+		.navbar
+			.navbar-inner
+				%a.brand{href:"#"} Candlyzer
+				%ul.nav
+					%li.active
+						%a{href:root_path} Home
+					%li
+						%a{href:"#"} Patterns
+					%li
+						%a{href:"#"} About
+				.pull-right
+					=form_tag "/symbol_search", class:"form-search", id:"nav-search" do 
+						=search_field_tag :security_symbol, nil, placeholder: "Search for a Stock Symbol", class:"input-small search-query"
+						=button_tag "Go", class:"btn"
+		
+		.container#main-content
+			= yield

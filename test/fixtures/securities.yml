@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  exchange_id: 1
+  company_name: MyString
+  symbol: MyString
+
+two:
+  exchange_id: 1
+  company_name: MyString
+  symbol: MyString

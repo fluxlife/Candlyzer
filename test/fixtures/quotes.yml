@@ -1,0 +1,20 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  open: 9.99
+  high: 9.99
+  low: 9.99
+  close: 9.99
+  datetime: 2013-01-28 10:16:36
+  volume: 9.99
+  security_id: 1
+
+two:
+  open: 9.99
+  high: 9.99
+  low: 9.99
+  close: 9.99
+  datetime: 2013-01-28 10:16:36
+  volume: 9.99
+  security_id: 1

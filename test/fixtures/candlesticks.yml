@@ -1,0 +1,24 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  upper_shadow_length: 9.99
+  lower_shadow_length: 9.99
+  body_length: 9.99
+  upper_shadow_percent: 9.99
+  lower_shadow_percent: 9.99
+  body_percent: 9.99
+  body_top: 9.99
+  body_bottom: 9.99
+  trend: MyString
+
+two:
+  upper_shadow_length: 9.99
+  lower_shadow_length: 9.99
+  body_length: 9.99
+  upper_shadow_percent: 9.99
+  lower_shadow_percent: 9.99
+  body_percent: 9.99
+  body_top: 9.99
+  body_bottom: 9.99
+  trend: MyString

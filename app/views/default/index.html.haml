@@ -1,0 +1,9 @@
+.container#content-header
+	%h1.center
+		Welcome to Candlyzer
+.container#search-box
+	.center
+		%h4 Search for a Stock Symbol to retrieve your Candlestick Chart
+		=form_tag "/symbol_search", class:"form-search", id:"index-search" do 
+			=search_field_tag :security_symbol, nil, placeholder: "Search for a Stock Symbol", class:"input-large search-query", "data-provide"=>"typeahead"
+			=button_tag "Search", class:"btn"

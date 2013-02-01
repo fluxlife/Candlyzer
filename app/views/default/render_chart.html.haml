@@ -1,0 +1,51 @@
+%h2 
+	Chart for 
+	=@symbol.upcase
+
+.container
+	#stock_chart.center
+
+:javascript
+	$(document).ready(function(){
+		var groupingUnits = [
+			['day', [1] ],
+			['week', [1] ]
+		];
+
+		var chart = new Highcharts.StockChart({
+			chart:{renderTo: 'stock_chart', alignTicks: false},
+			
+			rangeSelector:{selected: 1},
+			
+			title:{text: '#{@symbol} Historical'},
+
+			plotOptions:{
+				area: {dataGrouping: groupingUnits}
+			},
+			
+			yAxis:[{
+				title:{text: 'OHLC'},
+				height: 200,
+				lineWidth: 2
+			}, {
+				title:{text: 'Volume'},
+				top: 300,
+				height: 100,
+				offset: 0,
+				lineWidth: 2,
+			}],
+
+			series:[{
+				type: 'candlestick',
+				name: '#{@symbol}'.toUpperCase(),
+				data: #{@quotes}
+			},{
+				type: 'column',
+				name: 'Volume',
+				data: #{@volumes},
+				yAxis: 1
+			}]
+
+		});//end var chart
+
+	});//end Document Ready
